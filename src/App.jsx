@@ -20,7 +20,7 @@ function App() {
 
   async function reviewCode() {
     try {
-      const response = await axios.post('http://localhost:3000/ai/get-review', { code });
+      const response = await axios.post('https://code-review-web-app-backend-2.onrender.com/ai/get-review', { code });
       setReview(response.data.review); // Access the 'review' property
     } catch (error) {
       console.error("Error reviewing code:", error);
